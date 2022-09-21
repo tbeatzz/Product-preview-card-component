@@ -1,0 +1,155 @@
+:root {
+  --Dark_cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very_dark_blue: hsl(212, 21%, 14%);
+  --Dark_grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+}
+
+.main_container {
+  width: 45em;
+  height: 35em;
+  display: flex;
+}
+
+.p_img {
+  width: 50%;
+}
+.p_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+
+  max-inline-size: 100%;
+}
+.mobile {
+  display: none;
+}
+
+.p_data {
+  width: 50%;
+  padding: 0.5em 2em;
+
+  background-color: var(--White);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  border-radius: 0px 20px 20px 0px;
+}
+
+.p_category p {
+  font-size: 0.8em;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+.p_title h1 {
+  font-family: "Fraunces", serif !important;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: capitalize;
+  line-height: 35px;
+}
+.p_short_desc p {
+  font-size: 0.9em;
+  line-height: 25px;
+}
+
+.p_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.p_price h1 {
+  font-family: "Fraunces", serif !important;
+  color: var(--Dark_cyan);
+  font-size: 3em;
+}
+.old_price {
+  color: rgb(88, 88, 88);
+  text-decoration: line-through;
+}
+.button_add_cart {
+  width: 100%;
+  background-color: var(--Dark_cyan);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.button_add_cart:hover {
+  background-color: #1a4031;
+}
+.button_add_cart a {
+  width: 100%;
+  text-decoration: none;
+}
+.button_add_cart button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 1.5em;
+
+  cursor: pointer;
+}
+.button_add_cart button img {
+  margin-right: 16px;
+}
+.button_add_cart p {
+  color: var(--White);
+  font-weight: 700;
+}
+
+@media (max-width: 727px) {
+  .main_container {
+    width: 100%;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1em;
+  }
+  .p_data {
+    width: 100%;
+    padding: 2em 2em;
+    border-radius: 0 0 20px 20px;
+    gap: 1em;
+  }
+  .p_img {
+    width: 100%;
+  }
+  .p_img img {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .p_price h1 {
+    font-size: 2em;
+  }
+  .p_title h1 {
+    font-size: 1.6em;
+  }
+}
